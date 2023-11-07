@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For Git</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hello Sashi</h1>
-</body>
+    <script>
+        // FOR IN LOOP
+
+      //   let object = {
+      //     a: 1,
+      //     b: 2,
+      //     c: 3,
+      //   };
+
+      //   for (let x in object) {
+      //     console.log(object[x]);
+      //     console.log(x);
+      //   }
+
+    //   ODD EVEN PRIME AND DIVISIBLE BY 5
+    
+      let eNumber = prompt("Enter a number");
+      let num = Number(eNumber);
+
+      for (let i = 5; i <= num - 5; i++) {
+        if (i % 5 === 0) {
+          oddEven(i);
+        }
+      }
+
+      function oddEven(num) {
+        if (num % 2 === 0) {
+          checkPrime(num, "even");
+        } else {
+          checkPrime(num, "odd");
+        }
+      }
+
+      function checkPrime(num, message) {
+        let isPrime = true;
+        for (let i = 2; i < num / 2; i++) {
+          if (num % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          console.log(num, "is a prime and " + message);
+        } else {
+          console.log(num, "is not a prime and " + message);
+        }
+      }
+    </script>
+  </body>
 </html>
